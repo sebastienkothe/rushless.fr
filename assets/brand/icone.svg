@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">Rushless — R signal — icone</title>
+<desc id="desc">Icône pour avatar rond, avec zone de sécurité.</desc>
+<rect width="1024" height="1024" fill="#FFFFFF"/>
+<g transform="translate(101.000 128.000) scale(3)"><path fill="#F97316" fill-rule="evenodd" d="M64 48H132C177 48 202 70 202 107C202 132 189 151 166 160L210 208H157L116 162H104V208H64ZM104 82V132L150 107Z"/></g>
+</svg>
