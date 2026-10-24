@@ -34,3 +34,5 @@
 /* Retouche Rémi 24/10 : CTA d'en-tête compact sur mobile */
 @media(max-width:520px){.brand img{width:124px;height:auto}.header-cta{white-space:nowrap;font-size:12px;padding:10px 12px}.header-cta svg{display:none}}
 @media(max-width:385px){.header-cta{display:none}}
+
+.footer-bottom>a.footer-social{color:#202124}@media(max-width:700px){.footer-bottom>a.footer-social{grid-column:auto;min-height:25px}.footer-bottom>a.footer-social:last-child{justify-content:flex-end}}

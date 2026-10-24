@@ -74,7 +74,10 @@
   const load = state => {
     if (!state.video.hasAttribute('src')) { state.video.src = state.video.dataset.src; state.video.load(); }
   };
+  // Demo videos wait until the page has loaded so they never compete with the first paint.
+  let mediaReady = document.readyState === 'complete';
   const play = async state => {
+    if (!mediaReady && !state.requested) return;
     load(state);
     try {
       await state.video.play();
@@ -164,6 +167,10 @@
     state.sync();
   }));
   document.addEventListener('visibilitychange', () => states.forEach(refresh));
+  if (!mediaReady) window.addEventListener('load', () => setTimeout(() => {
+    mediaReady = true;
+    states.forEach(refresh);
+  }, 1200), { once: true });
   reduceMotion.addEventListener('change', () => {
     states.forEach(state => {
       state.requested = false;
