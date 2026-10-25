@@ -38,3 +38,7 @@
 .footer-bottom>a.footer-social{color:#202124}@media(max-width:700px){.footer-bottom>a.footer-social{grid-column:auto;min-height:25px}.footer-bottom>a.footer-social:last-child{justify-content:flex-end}}
 
 .spark,.format-list i,.contact-outline,.app-stat-row b{font-variant-emoji:text}
+
+/* Listes des deux formules : lisibilité dans les cartes existantes. */
+.formules .audience-body ul{margin:20px 0 0;padding-left:20px;color:#707173;font-size:14px;line-height:1.8}
+.formules .audience-body li+li{margin-top:8px}
