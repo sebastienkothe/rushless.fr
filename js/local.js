@@ -15,22 +15,20 @@
   const playIcon = '<svg class="media-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>';
   const pauseIcon = '<svg class="media-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
   const status = document.querySelector('#media-status');
-  const reels = [...document.querySelectorAll('.reel')];
+  const reels = [...document.querySelectorAll('.reel[data-video]')];
   const reelVisibility = new Map();
   const refreshReels = () => reels.forEach(reel => {
-    const active = !reduce.matches && !document.hidden && !reel.dataset.paused && reelVisibility.get(reel);
-    reel.classList.toggle('is-playing', !!active);
+    const video = reel.querySelector('video');
     const button = reel.querySelector('button');
-    button.parentElement.hidden = reduce.matches;
+    const active = !document.hidden && !reel.dataset.paused && !(reduce.matches && !reel.dataset.started) && reelVisibility.get(reel) !== false;
+    if (active) { const p = video.play(); if (p) p.catch(() => {}); } else video.pause();
+    button.parentElement.hidden = false;
     button.innerHTML = active ? pauseIcon : playIcon;
     button.setAttribute('aria-pressed', String(!!active));
-    button.setAttribute('aria-label', `${active ? 'Mettre en pause' : 'Lire'} la maquette ${reel.dataset.name}`);
-    button.disabled = reduce.matches;
-    if (reduce.matches) button.setAttribute('aria-label', 'Animation désactivée selon votre préférence de mouvement réduit');
+    button.setAttribute('aria-label', `${active ? 'Mettre en pause' : 'Lire'} la vidéo ${reel.dataset.name}`);
   });
-  reels.forEach(reel => reel.querySelector('button').addEventListener('click', () => { if (reel.dataset.paused) delete reel.dataset.paused; else reel.dataset.paused = 'true'; status.textContent = reel.dataset.paused ? 'Animation en pause.' : 'Animation reprise.'; refreshReels(); }));
+  reels.forEach(reel => reel.querySelector('button').addEventListener('click', () => { const playing = !reel.querySelector('video').paused; if (playing) reel.dataset.paused = 'true'; else { delete reel.dataset.paused; reel.dataset.started = 'true'; } status.textContent = reel.dataset.paused ? 'Vidéo en pause.' : 'Vidéo en lecture.'; refreshReels(); }));
   if ('IntersectionObserver' in window) { const observer = new IntersectionObserver(entries => { entries.forEach(e => reelVisibility.set(e.target, e.isIntersecting && e.intersectionRatio >= .2)); refreshReels(); }, { threshold:[0,.2,.8] }); reels.forEach(reel => observer.observe(reel)); }
-  else reels.forEach(reel => reelVisibility.set(reel, true));
   refreshReels();
   document.addEventListener('visibilitychange', refreshReels);
   reduce.addEventListener('change', refreshReels);

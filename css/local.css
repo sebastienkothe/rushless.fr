@@ -7,7 +7,7 @@
 .reel-scene:nth-of-type(2){animation-delay:-12s}.reel-scene:nth-of-type(3){animation-delay:-6s}
 .reel-scene img{animation:ken-burns 18s ease-in-out infinite alternate;animation-play-state:paused;transform:scale(1.015)}
 .reel.is-playing .reel-scene,.reel.is-playing .reel-scene img{animation-play-state:running}
-.reel--photo .reel-scene:after{content:"";position:absolute;inset:38% 0 20%;background:linear-gradient(transparent,#202124bd 55%,#202124e8);pointer-events:none}
+.reel-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .reel .video-controls{justify-content:flex-end}.reel .media-button{width:44px;height:44px}
 .demo-mention span{display:block}.demo-coming{margin-top:7px;font-size:10px;line-height:1.55}
 @keyframes reel-scene{0%,29%{opacity:1}33.333%,96%{opacity:0}100%{opacity:1}}
