@@ -56,6 +56,7 @@
   --faq-title-size: var(--faq-title-size-desktop);
   --eyebrow-size: var(--eyebrow-size-desktop);
   --eyebrow-leading: 1.5;
+  --eyebrow-case: uppercase;
   --eyebrow-tracking: var(--eyebrow-tracking-desktop);
   --eyebrow-gap: var(--eyebrow-gap-desktop);
   --button-radius: 9px;

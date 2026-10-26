@@ -20,7 +20,7 @@ button{border:0}
 [hidden]{display:none!important}
 .container{width:min(var(--size-1168px),calc(100% - var(--size-96px)));margin-inline:auto}
 .section-pad{padding-block:var(--size-100px)}
-.eyebrow{font-size:var(--eyebrow-size);line-height:var(--eyebrow-leading);font-weight:var(--weight-700);letter-spacing:var(--eyebrow-tracking);text-transform:none;display:flex;align-items:center;gap:var(--eyebrow-gap)}
+.eyebrow{font-size:var(--eyebrow-size);line-height:var(--eyebrow-leading);font-weight:var(--weight-700);letter-spacing:var(--eyebrow-tracking);text-transform:var(--eyebrow-case);display:flex;align-items:center;gap:var(--eyebrow-gap)}
 .eyebrow:before{content:"";width:var(--size-6px);height:var(--size-6px);border-radius:var(--radius-50pct);background:var(--orange);flex-shrink:0}
 .muted{color:var(--heading-muted)}
 .serif{font-family:var(--font-sans);font-style:normal;font-weight:var(--weight-600)}
@@ -410,7 +410,7 @@ h1,h2,h3,.eyebrow{overflow-wrap:break-word}
 
 .contact-inner>.eyebrow{color:var(--eyebrow-on-orange)}
 
-/* Presentation attributes remain byte-for-byte intact; CSS owns the map palette. */
+/* CSS owns the map palette through shared design tokens. */
 .zones-art svg>g:first-of-type{stroke:var(--map-grid)}
 
 .zones-art svg>path{stroke:var(--muted)}
