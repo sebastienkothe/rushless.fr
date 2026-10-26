@@ -3,3 +3,4 @@ Allow: /
 Disallow: /404.html
 
 Sitemap: https://rushless.fr/sitemap.xml
+Sitemap: https://rushless.fr/sitemap-zones.xml
