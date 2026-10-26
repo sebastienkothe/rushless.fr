@@ -17,17 +17,35 @@
   const status = document.querySelector('#media-status');
   const reels = [...document.querySelectorAll('.reel[data-video]')];
   const reelVisibility = new Map();
-  const refreshReels = () => reels.forEach(reel => {
+  const syncControls = reel => {
     const video = reel.querySelector('video');
     const button = reel.querySelector('button');
+    const playing = !video.paused && !video.ended && !video.error;
+    button.parentElement.hidden = !!video.error;
+    button.innerHTML = playing ? pauseIcon : playIcon;
+    button.setAttribute('aria-pressed', String(playing));
+    button.setAttribute('aria-label', `${playing ? 'Mettre en pause' : 'Lire'} la vidéo ${reel.dataset.name}`);
+  };
+  const refreshReel = async reel => {
+    const video = reel.querySelector('video');
     const active = !document.hidden && !reel.dataset.paused && !(reduce.matches && !reel.dataset.started) && reelVisibility.get(reel) !== false;
-    if (active) { const p = video.play(); if (p) p.catch(() => {}); } else video.pause();
-    button.parentElement.hidden = false;
-    button.innerHTML = active ? pauseIcon : playIcon;
-    button.setAttribute('aria-pressed', String(!!active));
-    button.setAttribute('aria-label', `${active ? 'Mettre en pause' : 'Lire'} la vidéo ${reel.dataset.name}`);
+    if (active) {
+      try { await video.play(); } catch { /* Keep a real play button if autoplay is blocked. */ }
+    } else video.pause();
+    syncControls(reel);
+  };
+  const refreshReels = () => reels.forEach(refreshReel);
+  reels.forEach(reel => {
+    const video = reel.querySelector('video');
+    ['play', 'playing', 'pause', 'ended', 'error'].forEach(event => video.addEventListener(event, () => syncControls(reel)));
+    syncControls(reel);
+    reel.querySelector('button').addEventListener('click', async () => {
+      if (!video.paused) reel.dataset.paused = 'true';
+      else { delete reel.dataset.paused; reel.dataset.started = 'true'; }
+      await refreshReel(reel);
+      if (status) status.textContent = video.paused ? 'Vidéo en pause.' : 'Vidéo en lecture.';
+    });
   });
-  reels.forEach(reel => reel.querySelector('button').addEventListener('click', () => { const playing = !reel.querySelector('video').paused; if (playing) reel.dataset.paused = 'true'; else { delete reel.dataset.paused; reel.dataset.started = 'true'; } status.textContent = reel.dataset.paused ? 'Vidéo en pause.' : 'Vidéo en lecture.'; refreshReels(); }));
   if ('IntersectionObserver' in window) { const observer = new IntersectionObserver(entries => { entries.forEach(e => reelVisibility.set(e.target, e.isIntersecting && e.intersectionRatio >= .2)); refreshReels(); }, { threshold:[0,.2,.8] }); reels.forEach(reel => observer.observe(reel)); }
   refreshReels();
   document.addEventListener('visibilitychange', refreshReels);
