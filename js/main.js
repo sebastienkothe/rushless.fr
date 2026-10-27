@@ -22,7 +22,7 @@
   document.addEventListener('click', e => {
     if (!menu.hidden && !e.target.closest('.site-header')) closeMenu();
   });
-  window.matchMedia('(min-width: 701px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
+  window.matchMedia('(min-width: 1101px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
 
   const revealElements = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -36,7 +36,7 @@
   const pauseIcon = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h4v14H7zm7 0h4v14h-4z"/></svg>';
   const mutedIcon = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></svg>';
   const soundIcon = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg>';
-  const names = { kalmo: 'Kalmo', solane: 'Maison Solane', ambre: 'Brûlerie Ambre' };
+  const names = { kalmo: 'Kalmo', solane: 'Maison Solane', aurelie: 'Aurélie' };
   const status = document.querySelector('#media-status');
   const states = new Map();
   const slots = [...document.querySelectorAll('[data-slot]')];

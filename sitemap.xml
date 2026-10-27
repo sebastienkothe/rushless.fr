@@ -1,16 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rushless.fr/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image><image:loc>https://rushless.fr/assets/og-image.png</image:loc></image:image>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
-    <loc>https://rushless.fr/mentions-legales.html</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <loc>https://rushless.fr/mentions-legales/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/nos-zones/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-agences-immobilieres/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-campings/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-gites-chambres-hotes/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-restaurants/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-domaines-viticoles/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-commerces-artisans/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-apps-saas/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://rushless.fr/reels-independants-freelances/</loc>
+    <lastmod>2026-10-27</lastmod>
   </url>
 </urlset>

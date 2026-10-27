@@ -71,13 +71,13 @@ button{border:0}
 .stage-label{position:absolute;left:0;top:var(--size-10px);writing-mode:vertical-rl;font-size:var(--type-size-10px);letter-spacing:var(--tracking-p2em);color:var(--muted)}
 .phone-wrap{width:var(--size-286px);max-width:82%}
 .phone-wrap .phone{transform:rotate(3deg)}
-.phone{position:relative;background:var(--ink);border:var(--size-1px) solid var(--art-color-797a7b);padding:var(--size-7px);border-radius:var(--radius-37px);box-shadow:var(--shadow-art-12);aspect-ratio:auto}
+.phone{--phone-frame-radius:var(--phone-local-radius);--phone-bezel:var(--phone-local-bezel);position:relative;background:var(--ink);border:var(--phone-border) solid var(--art-color-797a7b);padding:var(--phone-bezel);border-radius:var(--phone-frame-radius);box-shadow:var(--shadow-art-12);aspect-ratio:auto}
 .phone:before{content:"";position:absolute;width:var(--size-3px);height:var(--size-42px);left:var(--size-n3px);top:25%;background:var(--art-color-747576);border-radius:var(--radius-2px-0-0-2px)}
-.phone-screen{position:relative;aspect-ratio:9/16;width:100%;border-radius:var(--radius-30px);overflow:hidden;background:var(--ink);isolation:isolate}
+.phone-screen{position:relative;aspect-ratio:9/16;width:100%;border-radius:calc(var(--phone-frame-radius) - var(--phone-bezel) - var(--phone-border));overflow:hidden;background:var(--ink);isolation:isolate;transform:translateZ(0);clip-path:inset(0 round calc(var(--phone-frame-radius) - var(--phone-bezel) - var(--phone-border)))}
 .phone-screen img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover}
 .dynamic-island{position:absolute;top:2.5%;left:36%;width:28%;height:3.5%;background:var(--ink);border-radius:var(--radius-20px);z-index:5}
 .home-indicator{position:absolute;bottom:2%;left:34%;width:32%;height:var(--size-3px);background:var(--art-color-ffffffba);z-index:5;border-radius:var(--radius-4px)}
-.video-controls{position:absolute;bottom:6%;left:var(--size-12px);right:var(--size-12px);display:flex;justify-content:space-between;gap:var(--size-10px);z-index:8}
+.video-controls{position:absolute;bottom:var(--phone-control-inset);left:var(--phone-control-inset);right:var(--phone-control-inset);display:flex;justify-content:space-between;gap:var(--size-10px);z-index:8}
 .media-button{border:var(--size-1px) solid var(--art-color-ffffff70);background:var(--art-color-202124e8);color:var(--white);border-radius:var(--radius-50pct);width:var(--size-44px);height:var(--size-44px);display:grid;place-items:center;font-size:var(--type-size-16px)}
 .media-button:hover{background:var(--ink)}
 .media-button:focus-visible{outline-color:var(--white)}
@@ -266,8 +266,6 @@ details[open] summary{color:var(--orange-dark)}
 .hero-stage{margin:auto;width:min(100%,var(--size-430px));padding-block:var(--size-24px) var(--size-12px)}
 .hero-stage:before{width:97%;aspect-ratio:1}
 .phone-wrap{width:var(--size-227px);max-width:73%}
-.phone{border-radius:var(--radius-32px);padding:var(--size-6px)}
-.phone-screen{border-radius:var(--radius-26px)}
 .stage-label{font-size:var(--type-size-8px);top:var(--size-21px)}
 .stage-dot{right:3%;width:var(--size-10px);height:var(--size-10px)}
 .demo-mention{font-size:var(--type-size-10px);margin-top:var(--size-17px)}
@@ -419,3 +417,13 @@ h1,h2,h3,.eyebrow{overflow-wrap:break-word}
 
 .zones-art svg>g:last-of-type{fill:var(--orange);stroke:var(--soft)}
 
+
+/* Device safe areas belong to the page chrome, never the video. */
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.site-header{padding-top:env(safe-area-inset-top)}
+.site-footer{padding-bottom:env(safe-area-inset-bottom)}
+.mobile-menu{max-height:calc(100dvh - var(--size-100px) - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:auto}
+.trade-national{font-weight:var(--weight-700);color:var(--orange-dark)}
+.reel .video-controls{justify-content:space-between}
+.reel .video-controls:has(button:only-child){justify-content:flex-end}
+@media(min-width:761px) and (max-width:1100px){.desktop-nav{display:none}.menu-toggle{display:flex}.header-cta{margin-left:auto}}

@@ -682,3 +682,63 @@
     --showcase-title-size: var(--showcase-title-size-max-width-374px);
   }
 }
+
+/* Phone geometry: the screen radius includes both padding and the outer border. */
+:root {
+  --phone-border: 1px;
+  --phone-bezel: 7px;
+  --phone-frame-radius: 35px;
+  --phone-gallery-radius: 35px;
+  --phone-gallery-bezel: 7px;
+  --phone-local-radius: 37px;
+  --phone-local-bezel: 7px;
+  --phone-control-inset: 16px;
+  --hero-phone-left-angle: 12deg;
+  --hero-phone-center-angle: 0deg;
+  --hero-phone-right-angle: -12deg;
+  --hero-phone-stage-height: 570px;
+  --hero-phone-left-width: 200px;
+  --hero-phone-center-width: 230px;
+  --hero-phone-right-width: 190px;
+  --hero-phone-right-inset: 16px;
+  --hero-phone-stage-layer: 4;
+  --hero-phone-note-bottom: 20px;
+}
+@media (max-width:1199px) {
+  :root {
+    --hero-phone-stage-height: 660px;
+    --hero-phone-note-bottom: 40px;
+    --hero-phone-side-top: 220px;
+    --hero-phone-center-top: 20px;
+  }
+}
+@media (max-width:900px) {
+  :root { --phone-gallery-radius: 29px; --phone-gallery-bezel: 6px; }
+}
+@media (max-width:760px) {
+  :root { --phone-local-radius: 32px; --phone-local-bezel: 6px; }
+}
+@media (max-width:700px) {
+  :root {
+    --phone-frame-radius: 30px;
+    --phone-bezel: 6px;
+    --phone-gallery-radius: 34px;
+    --phone-gallery-bezel: 7px;
+    --hero-phone-stage-height: 600px;
+    --hero-phone-note-bottom: 50px;
+    --hero-phone-side-width: 148px;
+    --hero-phone-center-width: 180px;
+    --hero-phone-side-offset: 162px;
+    --hero-phone-side-top: 210px;
+    --hero-phone-center-top: 20px;
+    --hero-phone-left-angle: 8deg;
+    --hero-phone-right-angle: -8deg;
+  }
+}
+@media (max-width:374px) {
+  :root {
+    --hero-phone-side-width: 138px;
+    --hero-phone-center-width: 170px;
+    --hero-phone-side-offset: 132px;
+  }
+}
