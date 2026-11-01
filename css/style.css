@@ -78,7 +78,7 @@ p{line-height:var(--leading-1p65)}
 .hero-phone{position:absolute;will-change:transform}
 .hero-phone--kalmo{width:var(--hero-phone-left-width);left:0;top:var(--size-109px);transform:rotate(var(--hero-phone-left-angle));z-index:1}
 .hero-phone--solane{width:var(--hero-phone-center-width);left:calc(50% - var(--hero-phone-center-width)/2);top:var(--size-38px);transform:rotate(var(--hero-phone-center-angle));z-index:3}
-.hero-phone--aurelie{width:var(--hero-phone-right-width);right:var(--hero-phone-right-inset);top:var(--size-139px);transform:rotate(var(--hero-phone-right-angle));z-index:2}
+.hero-phone--fournil{width:var(--hero-phone-right-width);right:var(--hero-phone-right-inset);top:var(--size-139px);transform:rotate(var(--hero-phone-right-angle));z-index:2}
 .phone{position:relative;border:var(--phone-border) solid var(--art-color-77787a);border-radius:var(--phone-frame-radius);padding:var(--phone-bezel);background:linear-gradient(120deg,var(--art-color-767575),var(--art-color-242426) 8%,var(--art-color-141416) 80%,var(--art-color-7c7b7c));box-shadow:var(--shadow-art-3);aspect-ratio:9/16.8}
 .phone:before{content:"";position:absolute;height:var(--size-39px);width:var(--size-3px);background:linear-gradient(90deg,var(--art-color-222222),var(--art-color-888888));left:var(--size-n3px);top:23%;border-radius:var(--radius-2px-0-0-2px)}
 .phone:after{content:"";position:absolute;height:var(--size-57px);width:var(--size-3px);background:linear-gradient(90deg,var(--art-color-888888),var(--art-color-222222));right:var(--size-n3px);top:28%;border-radius:var(--radius-0-2px-2px-0)}
@@ -324,7 +324,7 @@ details[open] summary{color:var(--orange-dark)}
 .hero-stage{height:var(--hero-phone-stage-height);margin-right:var(--size-n15px)}
 .hero-phone--kalmo{width:var(--size-183px);left:var(--size-n5px);top:var(--hero-phone-side-top)}
 .hero-phone--solane{width:var(--size-215px);left:calc(50% - var(--size-100px));top:var(--hero-phone-center-top)}
-.hero-phone--aurelie{width:var(--size-175px);right:var(--hero-phone-right-inset);top:var(--hero-phone-side-top)}
+.hero-phone--fournil{width:var(--size-175px);right:var(--hero-phone-right-inset);top:var(--hero-phone-side-top)}
 .floating-note{bottom:var(--hero-phone-note-bottom);left:var(--size-20px);padding:var(--size-12px) var(--size-13px);font-size:var(--type-size-12px)}
 .hero h1{font-size:var(--hero-title-size-max-width-1199px)}
 .hero-description{font-size:var(--type-size-14px);max-width:var(--size-340px)}
@@ -355,7 +355,7 @@ details[open] summary{color:var(--orange-dark)}
 .hero-stage{margin-left:var(--size-n15px);margin-right:var(--size-n25px)}
 .hero-phone--kalmo{width:var(--size-157px);left:var(--size-7px);top:var(--hero-phone-side-top)}
 .hero-phone--solane{width:var(--size-185px);left:calc(50% - var(--size-85px));top:var(--hero-phone-center-top)}
-.hero-phone--aurelie{width:var(--size-153px);right:var(--hero-phone-right-inset);top:var(--hero-phone-side-top)}
+.hero-phone--fournil{width:var(--size-153px);right:var(--hero-phone-right-inset);top:var(--hero-phone-side-top)}
 .orange-orbit{width:var(--size-335px);height:var(--size-270px);top:26%}
 .hero-description{font-size:var(--type-size-13px)}
 .hero-actions .button{font-size:var(--type-size-12px);gap:var(--size-8px);padding-inline:var(--size-14px)}
@@ -442,7 +442,7 @@ details[open] summary{color:var(--orange-dark)}
 .hero-stage:before{inset:0 var(--size-n30px) 0}
 .hero-phone--kalmo{width:var(--hero-phone-side-width);left:calc(50% - var(--hero-phone-side-offset));top:var(--hero-phone-side-top)}
 .hero-phone--solane{width:var(--hero-phone-center-width);left:calc(50% - var(--hero-phone-center-width)/2);top:var(--hero-phone-center-top)}
-.hero-phone--aurelie{width:var(--hero-phone-side-width);right:calc(50% - var(--hero-phone-side-offset));top:var(--hero-phone-side-top)}
+.hero-phone--fournil{width:var(--hero-phone-side-width);right:calc(50% - var(--hero-phone-side-offset));top:var(--hero-phone-side-top)}
 .orange-orbit{width:var(--size-330px);height:var(--size-260px);left:calc(50% - var(--size-165px));top:var(--size-86px);transform:rotate(-35deg)}
 .stage-label{display:none}
 .floating-note{font-size:var(--type-size-12px);left:calc(50% - var(--size-132px));bottom:var(--hero-phone-note-bottom);padding:var(--size-10px) var(--size-15px);transform:rotate(-4deg);gap:var(--size-10px)}
