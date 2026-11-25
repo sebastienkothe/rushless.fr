@@ -28,6 +28,8 @@
 <meta name="twitter:description" content="Envoyez vos vidéos brutes, recevez des shorts montés en 72 h ouvrées : dérushage, sous-titres, habillage. Pour votre compte ou vos clients.">
 <meta name="twitter:image" content="https://rushless.fr/assets/og-image.png">
 <meta name="twitter:image:alt" content="Rushless — Vos rushes, montés en shorts prêts à publier en 72 h.">
+<link rel="preload" href="/fonts/BricolageGrotesque-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/home.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://rushless.fr/#organization","name":"Rushless","url":"https://rushless.fr/","logo":{"@type":"ImageObject","url":"https://rushless.fr/assets/brand/logo.png","width":1024,"height":1024},"image":"https://rushless.fr/assets/og-image.png","email":"sebastien.kothe.pro+rushless@gmail.com","slogan":"Vos rushes, montés en shorts prêts à publier en 72 h.","description":"Rushless monte des shorts à partir des rushes, pour les professionnels, les créateurs, les community managers et les petites agences. Dérushage, sous-titres relus, habillage aux couleurs du client, musique libre, livraison en 72 h ouvrées. Pour un community manager ou une agence, rien ne porte le nom de Rushless : le short est livré sous le leur.","address":{"@type":"PostalAddress","addressLocality":"Ille-sur-Têt","postalCode":"66130","addressRegion":"Occitanie","addressCountry":"FR"},"areaServed":{"@type":"Country","name":"France"},"knowsAbout":["Montage de shorts","Dérushage","Sous-titres de reels","Habillage de vidéos courtes","Reels Instagram","TikTok","YouTube Shorts"],"sameAs":["https://www.instagram.com/rushless.fr/","https://www.linkedin.com/company/rushless-fr/"]},{"@type":"WebSite","@id":"https://rushless.fr/#website","url":"https://rushless.fr/","name":"Rushless","inLanguage":"fr-FR","publisher":{"@id":"https://rushless.fr/#organization"}},{"@type":"WebPage","@id":"https://rushless.fr/#webpage","url":"https://rushless.fr/","name":"Montage de reels et shorts livrés en 72 h | Rushless","description":"Envoyez vos vidéos brutes, recevez des reels montés en 72 h ouvrées : dérushage, sous-titres, habillage. Pour pros, créateurs et CM. Dès 29 €.","inLanguage":"fr-FR","isPartOf":{"@id":"https://rushless.fr/#website"},"about":{"@id":"https://rushless.fr/#organization"},"primaryImageOfPage":"https://rushless.fr/assets/og-image.png"},{"@type":"FAQPage","@id":"https://rushless.fr/#faq","mainEntity":[{"@type":"Question","name":"Quel est le délai de livraison ?","acceptedAnswer":{"@type":"Answer","text":"72 h ouvrées, à partir de la réception des rushes. Les samedis, dimanches et jours fériés ne comptent pas dans ce délai."}},{"@type":"Question","name":"Comment se passent les retours ?","acceptedAnswer":{"@type":"Answer","text":"Une première version vous est envoyée. Vous me faites vos retours, je corrige."}},{"@type":"Question","name":"Et les droits sur la musique ?","acceptedAnswer":{"@type":"Answer","text":"Chaque short est livré avec une musique libre de droits, que vous pouvez publier avec la vidéo. La musique reste soumise à sa licence."}},{"@type":"Question","name":"Qu'est-ce qui est fait des rushes ?","acceptedAnswer":{"@type":"Answer","text":"Les rushes servent uniquement au montage. Ils ne sont pas publiés sur mon compte, ni utilisés comme vitrine."}}]}]}
@@ -63,7 +65,7 @@
   <section class="hero" id="accueil">
     <div class="container">
       <p class="eyebrow"><span></span> Montage de shorts</p>
-      <h1>Vos rushes, montés en shorts prêts à publier en 72 h.</h1>
+      <h1>Vos rushes, montés en shorts <br class="hero-break">prêts à publier <span class="nowrap">en&nbsp;72&nbsp;h.</span></h1>
       <p class="lede">Vous m'envoyez vos vidéos brutes, ou celles de vos clients. Je vous rends des shorts montés, prêts à publier. Pour votre propre compte, ou pour vos clients si vous êtes community manager ou agence : dans ce cas, rien ne porte mon nom, vous les livrez sous le vôtre.</p>
       <p class="formats">Instagram Reels, TikTok et YouTube Shorts.</p>
       <div class="hero-actions">
@@ -132,22 +134,31 @@
         <li>
           <p class="example-label">Référence</p>
           <a class="example-card" href="https://www.instagram.com/reel/DfiLKowyRE_/" target="_blank" rel="noopener">
-            <span class="example-title">Short sur Instagram</span>
-            <span class="example-link">instagram.com/reel/DfiLKowyRE_<span class="sr-only"> (nouvel onglet)</span></span>
+            <span class="example-media">
+              <img src="/assets/exemples/DfiLKowyRE_.webp" width="720" height="1280" alt="Extrait de la vidéo Les 5 Grok Bots que j'utilise chaque jour">
+              <span class="example-play" aria-hidden="true"></span>
+            </span>
+            <span class="example-title">Les 5 Grok Bots que j'utilise chaque jour<span class="sr-only"> (nouvel onglet)</span></span>
           </a>
         </li>
         <li>
           <p class="example-label">Short 2</p>
           <a class="example-card" href="https://www.instagram.com/reel/Df0EJv-TtOa/" target="_blank" rel="noopener">
-            <span class="example-title">Short sur Instagram</span>
-            <span class="example-link">instagram.com/reel/Df0EJv-TtOa<span class="sr-only"> (nouvel onglet)</span></span>
+            <span class="example-media">
+              <img src="/assets/exemples/Df0EJv-TtOa.webp" width="720" height="1280" alt="Extrait de la vidéo Comment j'évite que mes Grok Bots fassent n'importe quoi">
+              <span class="example-play" aria-hidden="true"></span>
+            </span>
+            <span class="example-title">Comment j'évite que mes Grok Bots fassent n'importe quoi<span class="sr-only"> (nouvel onglet)</span></span>
           </a>
         </li>
         <li>
           <p class="example-label">Short 3</p>
           <a class="example-card" href="https://www.instagram.com/reel/DgF7FLiDIdi/" target="_blank" rel="noopener">
-            <span class="example-title">Short sur Instagram</span>
-            <span class="example-link">instagram.com/reel/DgF7FLiDIdi<span class="sr-only"> (nouvel onglet)</span></span>
+            <span class="example-media">
+              <img src="/assets/exemples/DgF7FLiDIdi.webp" width="720" height="1280" alt="Extrait de la vidéo 6 usages de Grok Bot auxquels on ne pense pas">
+              <span class="example-play" aria-hidden="true"></span>
+            </span>
+            <span class="example-title">6 usages de Grok Bot auxquels on ne pense pas<span class="sr-only"> (nouvel onglet)</span></span>
           </a>
         </li>
       </ol>

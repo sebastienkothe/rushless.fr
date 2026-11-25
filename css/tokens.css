@@ -5,6 +5,13 @@
  * Media query breakpoints remain literals: CSS var() cannot be used in query conditions.
  * The two legacy brand-gradient tokens document immutable assets, not new UI accents.
  */
+@font-face{font-family:"Bricolage Grotesque";src:url("/fonts/BricolageGrotesque-SemiBold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url("/fonts/BricolageGrotesque-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/fonts/Manrope-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/fonts/Manrope-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/fonts/Manrope-SemiBold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/fonts/Manrope-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
 :root {
   --orange: #f97316;
   --orange-dark: #bd4206;
@@ -34,7 +41,8 @@
   --brand-legacy-gradient-start: #ff4d2e;
   --brand-legacy-gradient-end: #ff9a3c;
   --transparent: transparent;
-  --font-sans: Arial,Helvetica,sans-serif;
+  --font-sans: "Manrope",Arial,Helvetica,sans-serif;
+  --font-display: "Bricolage Grotesque",Arial,sans-serif;
   --font-serif: Georgia,serif;
   --font-decoration: Arial,sans-serif;
   --radius: 24px;
