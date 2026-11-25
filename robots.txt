@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://rushless.fr/sitemap.xml
-Sitemap: https://rushless.fr/sitemap-zones.xml
